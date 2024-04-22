@@ -31,7 +31,7 @@ const Profile = () => {
   // Handle saving profile and posting blogs
   const handleSaveProfile = () => {
     // Check if username already exists
-    if (savedUsers && savedUsers.some(user => user.username === username)) {
+    if (savedUsers.some(user => user.username === username)) {
       alert('Username already exists. Please choose a different one.');
       return;
     }
@@ -42,7 +42,7 @@ const Profile = () => {
         console.log('Profile saved successfully:', response.data);
         setCurrentUserId(response.data.id);
         // Add the saved user to the list of saved users
-        setSavedUsers(prevUsers => [...prevUsers, response.data]);
+        setSavedUsers(prevUsers => [...prevUsers, { username }]);
       })
       .catch(error => {
         console.error('Error saving profile:', error);
