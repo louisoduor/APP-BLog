@@ -19,7 +19,7 @@ Flask JWT Extended
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/your-username/blog-app.git
+git clone https://github.com/louisoduor/APP-BLog
 Install frontend dependencies:
 bash
 Copy code
